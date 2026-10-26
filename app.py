@@ -38,7 +38,7 @@ if submitted:
         "target_months": int(months),
     }
     try:
-        with st.spinner("AI analysis chal raha hai, 30 se 60 second lag sakte hain..."):
+       with st.spinner("AI analysis in progress. This may take 30 to 60 seconds..."):
             result = run_planning_and_valuation(params)
     except Exception as e:
         st.error(f"Error: {e}")
@@ -84,4 +84,4 @@ if submitted:
         st.write("•", k)
     st.info(val["reasoning"])
 
-    st.caption("AI-generated estimates hain. Real decisions se pehle local rates verify karein.")
+    st.caption("These are AI-generated estimates. Please verify with local rates before making real decisions.")
